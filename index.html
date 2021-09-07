@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFinder</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+</head>
+
+<body>
+    <section class="wrapper">
+
+        <h1 class="page-title">
+            <span>d</span><span>e</span><span>v</span><span>f</span><span>i</span><span>n</span><span>d</span><span>e</span><span>r</span>
+        </h1>
+
+        <div class="search-bar">
+            <input id="get-username" type="text" placeholder="Pesquise user do GitHub">
+            <button id="btn">Pesquisar</button>
+        </div>
+
+        <div class="user-box">
+
+            <div class="icon-area"></div>
+
+            <div class="user-infos">
+                <div class="user-infos-header">
+                    <span class="user-name"></span>
+                    <span class="joined"></span>
+                </div>
+                <p class="user-username"></p>
+                <p class="user-bio"></p>
+
+                <div class="github-infos">
+                    <div class="box">
+                        <span class="box-title">Repositórios</span>
+                        <span class="github-repos"></span>
+                    </div>
+
+                    <div class="box">
+                        <span class="box-title">Seguidores</span>
+                        <span class="github-seguidores"></span>
+                    </div>
+
+                    <div class="box">
+                        <span class="box-title">Seguindo</span>
+                        <span class="github-seguindo"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="github">
+        <a href="https://github.com/quefoirapha" target="_blank"><img src="./src/images/github.png" alt="Raphael Cardoso"></a>
+    </div>
+
+    <script src="./src/scripts/main.js"></script>
+</body>
+
+</html>
