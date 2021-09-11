@@ -1,15 +1,24 @@
 const btn = document.querySelector("#btn")
+var input = document.querySelector("#get-username")
+const userBox = document.querySelector(".user-box")
+
+input.onkeyup = function(event) {
+    if (event.keyCode === 13) /*13 = tecla enter*/ {
+        btn.click()
+    }
+}
 
 btn.onclick = function() {
-    let username = document.querySelector("#get-username").value
+    let username = input.value
     let url = `https://api.github.com/users/${username}`
 
     fetch(url).then(res=>res.json()).then(data=> {
         if(data.message) {
-            alert(`Não foi encontrado o perfil ${username} no github`)
+            userBox.classList.add("fade-in")
+            userBox.innerHTML = `<h1>Não foi encontrado o perfil ${username} no github</h1>`
         } else {
-            document.querySelector(".user-box").classList.add("fade-in")
-            document.querySelector(".user-box").innerHTML = /*html*/`
+            userBox.classList.add("fade-in")
+            userBox.innerHTML = /*html*/`
                 <div class="icon-area">
                     <img src="${data.avatar_url}" alt="${data.name}" class="user-icon">
                 </div>
