@@ -16,7 +16,6 @@ html {
 body {
   min-height: 100vh;
   background-color: #2F2325;
-  background-image: url("../images/main-bg.png");
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,6 +26,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.stars .stars-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/main-bg.png");
 }
 
 .wrapper {
